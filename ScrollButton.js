@@ -3,7 +3,7 @@ import { BsArrowUp } from "react-icons/bs";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  display: ${({ $scrolled }) => ($scrolled ? "flex" : "none")};
+  display: ${({ scrolled }) => (scrolled ? "flex" : "none")};
   z-index: 999;
   position: fixed;
   bottom: 10vh;
@@ -46,7 +46,7 @@ const ScrollButton = () => {
   }, []);
 
   return (
-    <StyledButton onClick={scrollOnClick} $scrolled={scrolled}>
+    <StyledButton onClick={scrollOnClick} scrolled={scrolled}>
       <StyledIcon />
     </StyledButton>
   );
